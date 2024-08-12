@@ -1,0 +1,69 @@
+<template>
+    <lightning-card title="Trade Component">
+        <div class="slds-m-around_medium">
+            <div class="header">New Trade</div>
+            <hr class="separator" />
+
+            <div class="form-layout">
+                <!-- Sell Currency and Sell Amount -->
+                <div class="form-item">
+                    <label class="slds-text-title_bold">Sell Currency</label>
+                    <lightning-combobox
+                        name="sellCurrency"
+                        value={sellCurrency}
+                        options={currencyOptions}
+                        onchange={handleSellCurrencyChange}>
+                    </lightning-combobox>
+
+                    <label class="slds-text-title_bold">Sell Amount</label>
+                    <lightning-input
+                        type="number"
+                        value={sellAmount}
+                        onchange={handleSellAmountChange}>
+                    </lightning-input>
+                </div>
+
+                <!-- Rate -->
+                <div class="rate-item">
+                    <label class="slds-text-title_bold">Rate</label>
+                    <lightning-input
+                        type="number"
+                        value={rate}
+                        disabled>
+                    </lightning-input>
+                </div>
+
+                <!-- Buy Currency and Buy Amount -->
+                <div class="form-item">
+                    <label class="slds-text-title_bold">Buy Currency</label>
+                    <lightning-combobox
+                        name="buyCurrency"
+                        value={buyCurrency}
+                        options={currencyOptions}
+                        onchange={handleBuyCurrencyChange}>
+                    </lightning-combobox>
+
+                    <label class="slds-text-title_bold">Buy Amount</label>
+                    <lightning-input
+                        type="number"
+                        value={buyAmount}
+                        onchange={handleBuyAmountChange}>
+                    </lightning-input>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <lightning-button
+                    variant="brand"
+                    label="Add"
+                    onclick={handleAddClick}>
+                </lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    label="Cancel"
+                    onclick={handleCancelClick}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

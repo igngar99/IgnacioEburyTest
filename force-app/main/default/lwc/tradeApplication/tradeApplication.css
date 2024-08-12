@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid black; /* Línea negra separadora debajo de la cabecera */
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.new-trade-button {
+    text-align: right;
+    /* Añadimos margen a los lados del botón */
+    margin: 0 1rem; /* 1rem de margen a la izquierda y derecha del botón */
+}
+
+.new-trade-button lightning-button {
+    border: none; /* Asegura que no haya borde extra alrededor del botón */
+    box-shadow: none; /* Elimina cualquier sombra que pueda aparecer como un borde */
+}
+
+/* Asegurarse de que no haya línea negra adicional en la tarjeta */
+lightning-card {
+    padding: 0;
+}
+
+.slds-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.slds-table th,
+.slds-table td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.separator {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem; /* Añadir padding al contenedor del formulario para separar los campos de los bordes */
+}
+
+.form-item,
+.rate-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label,
+.rate-item label {
+    margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
+}
+
+.form-item lightning-input,
+.rate-item lightning-input,
+.form-item lightning-combobox,
+.rate-item lightning-combobox {
+    padding: 0.5rem; /* Añadir padding interno a los campos de entrada */
+    margin: 0.5rem 0; /* Espacio vertical entre los campos de entrada */
+}
+
+.slds-text-title_bold {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Añade un espacio superior para separar los botones de los campos */
+    padding: 0 20px; /* Opcional: Añade padding para que los botones no estén pegados al borde del contenedor */
+}
+
